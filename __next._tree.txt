@@ -1,0 +1,4 @@
+:HL["/hesabyar-web/_next/static/chunks/26xw5_7vq1lqi.css","style"]
+:HL["/hesabyar-web/_next/static/chunks/3r4i84v0c3zpk.css","style"]
+:HC["/",""]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"XfY_D574nydg7K8gXxirS"}

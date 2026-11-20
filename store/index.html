@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>پکیج انتشار حسابانه در کافه‌بازار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background: #eef2f1;
+    color: #0f172a;
+    line-height: 1.9;
+  }
+  header {
+    background: linear-gradient(135deg, #064e3b 0%, #0d9488 100%);
+    color: #fff;
+    padding: 40px 16px 88px;
+    text-align: center;
+  }
+  .brand-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 999px; padding: 6px 18px;
+    font-weight: 700; font-size: 14px; margin-bottom: 18px;
+  }
+  .brand-badge img { width: 22px; height: 22px; border-radius: 6px; }
+  header h1 { font-size: 26px; font-weight: 800; }
+  header p { color: #d1fae5; font-size: 14px; margin-top: 6px; }
+  main { max-width: 1080px; margin: -56px auto 0; padding: 0 16px 48px; }
+  .cta {
+    display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+    background: #0d9488; color: #fff; text-decoration: none;
+    font-weight: 800; font-size: 17px;
+    border-radius: 20px; padding: 18px 20px;
+    box-shadow: 0 14px 34px rgba(13,148,136,.35);
+    transition: transform .15s ease, background .15s ease;
+  }
+  .cta:hover { background: #0f766e; transform: translateY(-1px); }
+  .cta svg { width: 22px; height: 22px; }
+  .cta small { font-weight: 600; opacity: .85; font-size: 12px; }
+  section {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 20px;
+    padding: 22px; margin-top: 18px;
+    box-shadow: 0 4px 18px rgba(15,23,42,.05);
+  }
+  h2 { font-size: 17px; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  h2 .num {
+    background: #ccfbf1; color: #0f766e; border-radius: 10px;
+    font-size: 12px; padding: 2px 10px; font-weight: 700;
+  }
+  .hint { color: #64748b; font-size: 12.5px; margin-bottom: 16px; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 14px;
+  }
+  .shot { border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; background: #f8fafc; display: flex; flex-direction: column; }
+  .shot .frame { height: 360px; overflow: hidden; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform .25s ease; }
+  .shot:hover img { transform: scale(1.04); }
+  .shot .meta { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 8px; }
+  .shot .cap { font-size: 12.5px; font-weight: 700; line-height: 1.7; }
+  .shot a {
+    text-align: center; text-decoration: none; font-size: 12px; font-weight: 700;
+    color: #0f766e; background: #ecfdf5; border: 1px solid #a7f3d0;
+    border-radius: 10px; padding: 7px 8px; transition: background .15s ease;
+  }
+  .shot a:hover { background: #d1fae5; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .file-card {
+    flex: 1 1 240px; display: flex; align-items: center; gap: 12px;
+    border: 1px solid #e2e8f0; border-radius: 14px; padding: 12px 14px; text-decoration: none; color: inherit;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .file-card:hover { border-color: #14b8a6; background: #f0fdfa; }
+  .file-card .ic {
+    width: 42px; height: 42px; border-radius: 12px; background: #ccfbf1; color: #0f766e;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px;
+  }
+  .file-card .t { font-weight: 700; font-size: 13.5px; }
+  .file-card .s { color: #64748b; font-size: 11.5px; }
+  ol.steps { padding-inline-start: 20px; font-size: 13.5px; display: grid; gap: 8px; }
+  ol.steps b { color: #0f766e; }
+  .opt {
+    border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px 16px; margin-top: 10px; background: #f8fafc;
+  }
+  .opt h3 { font-size: 14px; font-weight: 800; margin-bottom: 6px; color: #134e4a; }
+  .note {
+    background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
+    border-radius: 12px; padding: 10px 14px; font-size: 12.5px; margin-top: 12px;
+  }
+  footer { text-align: center; color: #64748b; font-size: 12px; padding: 8px 16px 34px; }
+  footer b { color: #0f766e; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand-badge"><img src="/icons/icon-192.png" alt="لوگو حسابانه" /> حسابانه</div>
+  <h1>پکیج انتشار در کافه‌بازار</h1>
+  <p>اسکرین‌شات‌ها، متن‌های صفحه فروشگاه، آیکون‌ها و فایل ZIP — همه آماده آپلود در پنل توسعه‌دهندگان</p>
+</header>
+
+<main>
+  <a class="cta" href="hesabyar-bazaar-package.zip" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    دانلود همه فایل‌ها (ZIP) <small>حدود ۴ مگابایت — ۹ اسکرین‌شات + متن‌ها + آیکون‌ها</small>
+  </a>
+
+  <section>
+    <h2><span class="num">۱</span> اسکرین‌شات‌های صفحه فروشگاه</h2>
+    <p class="hint">۹ تصویر ۱۰۸۰×۲۵۸۰ پیکسل (PNG) با کپشن برند — به همین ترتیب در کافه‌بازار آپلود کنید. نسخه‌های بدون کپشن در پوشه <span dir="ltr">store/raw</span> مخزن گیت‌هاب موجود است.</p>
+    <div class="grid">
+      <figure class="shot"><div class="frame"><img src="screenshots/01-modiriat-mali.png" alt="مدیریت مالی" loading="lazy" /></div><figcaption class="meta"><span class="cap">۱) مدیریت کامل مالی کسب‌وکار</span><a href="screenshots/01-modiriat-mali.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/02-factor.png" alt="فاکتور" loading="lazy" /></div><figcaption class="meta"><span class="cap">۲) فاکتور فروش و خرید در چند ثانیه</span><a href="screenshots/02-factor.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/03-barcode-emza.png" alt="بارکد و امضا" loading="lazy" /></div><figcaption class="meta"><span class="cap">۳) صدور فاکتور با بارکدخوان و امضای مشتری</span><a href="screenshots/03-barcode-emza.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/04-chap-ghaleb.png" alt="قالب چاپ" loading="lazy" /></div><figcaption class="meta"><span class="cap">۴) ۷ قالب چاپ فاکتور حرفه‌ای</span><a href="screenshots/04-chap-ghaleb.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/05-fish-hararati.png" alt="فیش حرارتی" loading="lazy" /></div><figcaption class="meta"><span class="cap">۵) چاپ فیش حرارتی ۸۰ میلی‌متری</span><a href="screenshots/05-fish-hararati.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/06-dastyar.png" alt="دستیار صوتی" loading="lazy" /></div><figcaption class="meta"><span class="cap">۶) دستیار هوشمند صوتی</span><a href="screenshots/06-dastyar.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/07-checks.png" alt="مدیریت چک" loading="lazy" /></div><figcaption class="meta"><span class="cap">۷) مدیریت چک‌های دریافتی و پرداختی</span><a href="screenshots/07-checks.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/08-report.png" alt="گزارش‌ها" loading="lazy" /></div><figcaption class="meta"><span class="cap">۸) گزارش‌های مالی کامل</span><a href="screenshots/08-report.png" download>دانلود</a></figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="screenshots/09-cardex.png" alt="کاردکس کالا" loading="lazy" /></div><figcaption class="meta"><span class="cap">۹) مدیریت کالا و انبار</span><a href="screenshots/09-cardex.png" download>دانلود</a></figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">۲</span> متن‌های صفحه فروشگاه و آیکون‌ها</h2>
+    <p class="hint">متن‌ها مستقیم قابل کپی در فرم «کافه‌پست» (پنل توسعه‌دهندگان بازار) هستند.</p>
+    <div class="row">
+      <a class="file-card" href="bazaar-listing.md" download>
+        <span class="ic">📝</span>
+        <span><span class="t">متن‌های کامل فروشگاه</span><br /><span class="s">bazaar-listing.md — نام، توضیح کوتاه/بلند، تازه‌ها، کلمات کلیدی، چک‌لیست</span></span>
+      </a>
+      <a class="file-card" href="icons/icon-512.png" download>
+        <span class="ic"><img src="icons/icon-512.png" alt="" style="width:34px;height:34px;border-radius:9px" /></span>
+        <span><span class="t">آیکون ۵۱۲×۵۱۲</span><br /><span class="s">icon-512.png — لوگوی اصلی برای کافه‌بازار</span></span>
+      </a>
+      <a class="file-card" href="icons/icon-192.png" download>
+        <span class="ic"><img src="icons/icon-192.png" alt="" style="width:34px;height:34px;border-radius:9px" /></span>
+        <span><span class="t">آیکون ۱۹۲×۱۹۲</span><br /><span class="s">icon-192.png — برای وب‌اپ و موارد کوچک</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">۳</span> چک‌لیست آپلود در کافه‌بازار</h2>
+    <ol class="steps">
+      <li><b>فایل APK/AAB</b> را آماده کنید (بخش ۴ همین صفحه) و در پنل «کافه‌پست» آپلود کنید.</li>
+      <li>آیکون ۵۱۲×۵۱۲ را از بخش ۲ همین صفحه آپلود کنید.</li>
+      <li>۹ اسکرین‌شات را به ترتیب بخش ۱ آپلود کنید.</li>
+      <li>متن‌ها را از فایل bazaar-listing.md کپی کنید: توضیح کوتاه، توضیحات کامل و «تازه‌ها».</li>
+      <li>دسته «مالی و حسابداری» و محتوای «برای همگان» را انتخاب کنید.</li>
+      <li>وب‌سایت پشتیبان = آدرس مخزن گیت‌هاب + ایمیل پشتیبانی را وارد کنید.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span class="num">۴</span> مرحله باقی‌مانده: ساخت فایل APK</h2>
+    <p class="hint">نسخه فعلی برنامه یک وب‌اپ پیش‌رفته (PWA) است که همین حالا هم قابل نصب روی گوشی است؛ اما کافه‌بازار فایل APK می‌خواهد. دو راه ساده:</p>
+
+    <div class="opt">
+      <h3>راه ۱ — PWABuilder (ساده‌ترین، بدون کدنویسی)</h3>
+      <ol class="steps">
+        <li>اول برنامه را روی یک هاست عمومی منتشر کنید (مثلاً Vercel — مخزن گیت‌هاب آماده است).</li>
+        <li>به <b dir="ltr">pwabuilder.com</b> بروید و آدرس عمومی برنامه را وارد کنید.</li>
+        <li>گزینه <b>Android</b> → Package را بزنید؛ خروجی «TWA» همان برنامه با همان manifest و آیکون‌های فعلی است.</li>
+        <li>فایل <span dir="ltr">app-release-signed.apk / .aab</span> را دانلود و در کافه‌بازار آپلود کنید.</li>
+      </ol>
+    </div>
+
+    <div class="opt">
+      <h3>راه ۲ — Capacitor + Android Studio</h3>
+      <ol class="steps">
+        <li><span dir="ltr">npm i @capacitor/core @capacitor/cli</span> و سپس <span dir="ltr">npx cap add android</span></li>
+        <li>سرور را به آدرس هاست عمومی برنامه اشاره دهید و پروژه را در Android Studio باز کنید.</li>
+        <li><b dir="ltr">Build → Generate Signed Bundle / APK</b></li>
+      </ol>
+    </div>
+
+    <div class="note">💡 منیفست PWA (<span dir="ltr">public/manifest.webmanifest</span>) و همه آیکون‌ها همین حالا آماده و استاندارد هستند؛ در هر دو راه دقیقاً از همین‌ها استفاده می‌شود.</div>
+  </section>
+</main>
+
+<footer><b>حسابانه</b> نسخه ۱٫۰٫۰ — حسابدار جیبی کسب‌وکار شما · ساخته‌شده برای کسب‌وکارهای ایرانی</footer>
+
+</body>
+</html>
